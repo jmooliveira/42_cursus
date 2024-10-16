@@ -1,35 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jemorais <jemorais@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/10 11:58:34 by jemorais          #+#    #+#             */
-/*   Updated: 2024/10/16 18:32:44 by jemorais         ###   ########.fr       */
+/*   Created: 2024/10/16 18:41:00 by jemorais          #+#    #+#             */
+/*   Updated: 2024/10/16 19:26:06 by jemorais         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-//#include <stdio.h>
-//#include <string.h>
-// #include <stddef.h>
 #include "libft.h"
 
-size_t	ft_strlen(const char *s)
+char	*ft_strdup(const char *s)
 {
-	size_t	i;
+	char	*dup;
+	int		i;
 
-	i = 0;
+	i = -1;
+	dup = (char *) malloc (ft_strlen(s) + 1 * sizeof(char));
 	while (s[i])
+	{
+		dup[i] = s[i];
 		i++;
-	return (i);
+	}
+	dup[i] = '\0';
+	return (dup);
 }
 
 // int	main(void)
 // {
-// 	const char	c[30] = "";
+// 	char	word[9] = "Jefferson";
 
-// 	printf ("%lu\n", ft_strlen(c));
-// 	printf ("%lu\n", strlen(c));
+// 	printf("%s\n", ft_strdup(word));
 // 	return (0);
 // }

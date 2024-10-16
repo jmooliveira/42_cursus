@@ -6,12 +6,13 @@
 /*   By: jemorais <jemorais@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/08 16:41:49 by jemorais          #+#    #+#             */
-/*   Updated: 2024/10/10 12:39:22 by jemorais         ###   ########.fr       */
+/*   Updated: 2024/10/16 18:31:38 by jemorais         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 //#include <stdio.h>
 //#include <ctype.h>
+#include "libft.h"
 
 int	ft_isprint(int c)
 {

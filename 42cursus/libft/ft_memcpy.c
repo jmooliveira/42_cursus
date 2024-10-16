@@ -6,13 +6,14 @@
 /*   By: jemorais <jemorais@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/14 14:23:18 by jemorais          #+#    #+#             */
-/*   Updated: 2024/10/15 13:33:23 by jemorais         ###   ########.fr       */
+/*   Updated: 2024/10/16 18:31:57 by jemorais         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 // #include <stdio.h>
 // #include <string.h>
-#include <stddef.h>
+// #include <stddef.h>
+#include "libft.h"
 
 void	*ft_memcpy(void *dest, const void *src, size_t n)
 {

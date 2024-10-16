@@ -6,12 +6,13 @@
 /*   By: jemorais <jemorais@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/08 16:16:37 by jemorais          #+#    #+#             */
-/*   Updated: 2024/10/08 16:36:57 by jemorais         ###   ########.fr       */
+/*   Updated: 2024/10/16 18:31:30 by jemorais         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 //#include <stdio.h>
 //#include <ctype.h>
+#include "libft.h"
 
 int	ft_isascii(int c)
 {

@@ -6,13 +6,14 @@
 /*   By: jemorais <jemorais@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/10 13:50:11 by jemorais          #+#    #+#             */
-/*   Updated: 2024/10/14 16:08:34 by jemorais         ###   ########.fr       */
+/*   Updated: 2024/10/16 18:32:20 by jemorais         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 // #include <stdio.h>
 // #include <string.h>
-#include <stddef.h>
+// #include <stddef.h>
+#include "libft.h"
 
 char	*ft_strchr(const char *s, int c)
 {

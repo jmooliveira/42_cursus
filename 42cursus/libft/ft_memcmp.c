@@ -6,13 +6,14 @@
 /*   By: jemorais <jemorais@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/15 16:33:02 by jemorais          #+#    #+#             */
-/*   Updated: 2024/10/15 17:16:49 by jemorais         ###   ########.fr       */
+/*   Updated: 2024/10/16 18:31:52 by jemorais         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 // #include <stdio.h>
 // #include <string.h>
-#include <stddef.h>
+// #include <stddef.h>
+#include "libft.h"
 
 int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {

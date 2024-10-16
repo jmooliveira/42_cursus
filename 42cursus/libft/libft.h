@@ -6,14 +6,17 @@
 /*   By: jemorais <jemorais@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/08 15:06:44 by jemorais          #+#    #+#             */
-/*   Updated: 2024/10/15 17:16:11 by jemorais         ###   ########.fr       */
+/*   Updated: 2024/10/16 19:11:37 by jemorais         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
 
+# include <stdio.h>
+
 # include <stddef.h>
+# include <stdlib.h>
 
 // ctype.h (7)
 int		ft_isalpha(int c);
@@ -38,5 +41,10 @@ void	*ft_memcpy(void *dest, const void *src, size_t n);
 void	*ft_memmove(void *dest, const void *src, size_t n);
 void	*ft_memchr(const void *s, int c, size_t n);
 int		ft_memcmp(const void *s1, const void *s2, size_t n);
+// stdlib.h (1)
+int		ft_atoi(const char *nptr);
+// stdlib.h (2)
+void	*ft_calloc(size_t nmemb, size_t size);
+char	*ft_strdup(const char *s);
 
 #endif
