@@ -6,7 +6,7 @@
 /*   By: jemorais <jemorais@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/14 11:12:41 by jemorais          #+#    #+#             */
-/*   Updated: 2024/10/16 18:32:11 by jemorais         ###   ########.fr       */
+/*   Updated: 2024/10/18 12:38:23 by jemorais         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ void	*ft_memset(void *s, int c, size_t n)
 
 	i = 0;
 	pt = s;
-	while (i < n && (s))
+	while (i < n && (s + i))
 	{
 		*pt = (unsigned char) c;
 		pt++;
@@ -34,18 +34,18 @@ void	*ft_memset(void *s, int c, size_t n)
 
 // int	main(void)
 // {
-// 		char	str[10] = "jefferson";
-// 		char	c;
-// 		char	d;
-// 		size_t	size;
+// 	char	str[255] = "\0";
+// 	char	c;
+// 	char	d;
+// 	size_t	size;
 
-// 		c = '-';
-// 		d = '~';
-// 		size = 5;
-// 		printf("%s\n", str);
-// 		ft_memset(str, c, size);
-// 		printf("%s\n", str);
-// 		memset(str, d, size);
-// 		printf("%s\n", str);
+// 	c = '-';
+// 	d = '~';
+// 	size = 255;
+// 	printf("%s\n", str);
+// 	ft_memset(str, c, size);
+// 	printf("%s\n", str);
+// 	memset(str, d, size);
+// 	printf("%s\n", str);
 // 	return (0);
 // }

@@ -1,24 +1,58 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strtrim.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: jemorais <jemorais@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/10/18 11:40:24 by jemorais          #+#    #+#             */
+/*   Updated: 2024/10/18 16:01:05 by jemorais         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
+
+int	ft_check_set_in_s(char s, char const *c)
+{
+	int	i;
+
+	i = 0;
+	while (c[i])
+	{
+		if (s == c[i])
+			return (1);
+		i++;
+	}
+	return (0);
+}
 
 char	*ft_strtrim(char const *s1, char const *set)
 {
-	unsigned char	*ptr;
-	int				i;
-	int				len_s1;
+	char	*ptr;
+	int		start;
+	int		end;
+	int		len_set;
 
 	if (!s1)
 		return (NULL);
-	i = 0;
-	len_s1 = ft_strlen(s1);
-
+	start = 0;
+	end = ft_strlen(s1) - 1;
+	len_set = ft_strlen(set);
+	while (ft_check_set_in_s(s1[start], set))
+		start++;
+	while (ft_check_set_in_s(s1[end], set))
+		end--;
+	ptr = ft_substr(s1, start, end - start + 1);
+	if (!ptr)
+		return (NULL);
 	return (ptr);
 }
 
-int	main(void)
-{
-	char	str[3] = "ana";
-	char	s = 'a';
+// int	main(void)
+// {
+// 	char	str[] = "lorem ipsum dolor sit amet";
+// 	char	s[] = "te";
 
-	printf("%d\n",ft_strtrim(str, s));
-	return (0);
-}
+// 	printf("%s\n",ft_strtrim(str, s));
+// 	return (0);
+// }
