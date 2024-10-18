@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jemorais <jemorais@student.42.fr>          +#+  +:+       +#+        */
+/*   By: jeff <jeff@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/08 15:06:44 by jemorais          #+#    #+#             */
-/*   Updated: 2024/10/16 19:11:37 by jemorais         ###   ########.fr       */
+/*   Updated: 2024/10/17 20:47:14 by jeff             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,5 +46,8 @@ int		ft_atoi(const char *nptr);
 // stdlib.h (2)
 void	*ft_calloc(size_t nmemb, size_t size);
 char	*ft_strdup(const char *s);
+// second part
+char	*ft_substr(char const *s, unsigned int start, size_t len);
+char	*ft_strjoin(char const *s1, char const *s2);
 
 #endif

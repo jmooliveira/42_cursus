@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strrchr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jemorais <jemorais@student.42.fr>          +#+  +:+       +#+        */
+/*   By: jeff <jeff@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/10 14:26:42 by jemorais          #+#    #+#             */
-/*   Updated: 2024/10/16 18:33:12 by jemorais         ###   ########.fr       */
+/*   Updated: 2024/10/17 18:33:09 by jeff             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 // #include <string.h>
 // #include <stdio.h>
-// #include <stddef.h>
+//#include <stddef.h>
 #include "libft.h"
 
 char	*ft_strrchr(const char *s, int c)
@@ -21,7 +21,7 @@ char	*ft_strrchr(const char *s, int c)
 	int	box;
 
 	i = 0;
-	box = 'NULL';
+	box = -1;
 	while (s[i])
 	{
 		if (s[i] == (char) c)
@@ -30,18 +30,18 @@ char	*ft_strrchr(const char *s, int c)
 	}
 	if (c == '\0')
 		return ((char *)s + i);
-	if (box != 'NULL')
+	if (box != -1)
 		return ((char *)s + box);
 	return (NULL);
 }
-
-// int	main(void)
-// {
-// 	const char	c[15] = "Jeffersone";
-// 	int			x;
-
-// 	x = 'o';
-// 	printf("%s\n", ft_strrchr(c, x));
-// 	printf("%s\n", strrchr(c, x));
-// 	return (0);
-// }
+/*
+int	main(void)
+{
+	const char	c[15] = "Jeffersone";
+	int			x;
+	x = 'o';
+	printf("%s\n", ft_strrchr(c, x));
+	printf("%s\n", strrchr(c, x));
+	return (0);
+}
+*/

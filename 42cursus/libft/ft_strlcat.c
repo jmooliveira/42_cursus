@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlcat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jemorais <jemorais@student.42.fr>          +#+  +:+       +#+        */
+/*   By: jeff <jeff@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/11 10:40:32 by jemorais          #+#    #+#             */
-/*   Updated: 2024/10/16 18:32:29 by jemorais         ###   ########.fr       */
+/*   Updated: 2024/10/17 20:45:38 by jeff             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,16 +34,18 @@ size_t	ft_strlcat(char *dst, const char *src, size_t size)
 	dst[dst_len + i] = '\0';
 	return (dst_len + src_len);
 }
+/*
+int	 main(void)
+{
+	char	source[31] = "lorem ipsum dolor sit amet";
+	char	dest[14] = "aBaBa";
+	size_t	buf;
 
-// int	 main(void)
-// {
-// 	char	source[26] = "lorem ipsum dolor sit amet";
-// 	char	dest[14] = "a";
-// 	size_t	buf;
+	buf  = 14;
+	printf("%zu\n", ft_strlcat(dest, source, buf));
+	printf("%s\n", dest);
+	//printf("%d\n", strlcat(dest, source, buf));
+	return (0);
+}
 
-// 	buf  = 15;
-// 	printf("%zu\n", ft_strlcat(dest, source, buf));
-// 	printf("%s\n", dest);
-// 	//printf("%d\n", strlcat(dest, source, buf));
-// 	return (0);
-// }
+*/
