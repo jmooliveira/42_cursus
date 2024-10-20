@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strtrim.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jemorais <jemorais@student.42.fr>          +#+  +:+       +#+        */
+/*   By: jeff <jeff@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/18 11:40:24 by jemorais          #+#    #+#             */
-/*   Updated: 2024/10/18 16:01:05 by jemorais         ###   ########.fr       */
+/*   Updated: 2024/10/18 23:31:15 by jeff             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,13 +31,11 @@ char	*ft_strtrim(char const *s1, char const *set)
 	char	*ptr;
 	int		start;
 	int		end;
-	int		len_set;
 
 	if (!s1)
 		return (NULL);
 	start = 0;
 	end = ft_strlen(s1) - 1;
-	len_set = ft_strlen(set);
 	while (ft_check_set_in_s(s1[start], set))
 		start++;
 	while (ft_check_set_in_s(s1[end], set))
@@ -47,12 +45,13 @@ char	*ft_strtrim(char const *s1, char const *set)
 		return (NULL);
 	return (ptr);
 }
+/*
+int	main(void)
+{
+	char	str[] = "lorem ipsum dolor sit amet";
+	char	s[] = "te";
 
-// int	main(void)
-// {
-// 	char	str[] = "lorem ipsum dolor sit amet";
-// 	char	s[] = "te";
-
-// 	printf("%s\n",ft_strtrim(str, s));
-// 	return (0);
-// }
+ 	printf("%s\n",ft_strtrim(str, s));
+	return (0);
+}
+*/
