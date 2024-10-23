@@ -6,13 +6,10 @@
 /*   By: jemorais <jemorais@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/10 13:50:11 by jemorais          #+#    #+#             */
-/*   Updated: 2024/10/16 18:32:20 by jemorais         ###   ########.fr       */
+/*   Updated: 2024/10/22 19:02:02 by jemorais         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-// #include <stdio.h>
-// #include <string.h>
-// #include <stddef.h>
 #include "libft.h"
 
 char	*ft_strchr(const char *s, int c)
@@ -22,18 +19,18 @@ char	*ft_strchr(const char *s, int c)
 	i = 0;
 	while (s[i])
 	{
-		if (s[i] == (char) c)
+		if (s[i] == (unsigned char) c)
 			return ((char *)s + i);
 		i++;
 	}
-	if (c == '\0')
+	if ((unsigned char) c == '\0')
 		return ((char *)s + i);
 	return (0);
 }
 
 // int	main(void)
 // {
-// 	const char	c[30] = "Jefferson";
+// 	const char	c[30] = "Teste";
 // 	char		x;
 
 // 	x = '\0';

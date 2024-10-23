@@ -6,7 +6,7 @@
 /*   By: jemorais <jemorais@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/16 14:27:29 by jemorais          #+#    #+#             */
-/*   Updated: 2024/10/16 17:38:25 by jemorais         ###   ########.fr       */
+/*   Updated: 2024/10/22 18:46:10 by jemorais         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ int	ft_atoi(const char *nptr)
 	ascii_to_int = 0;
 	i = 0;
 	signal = 1;
-	while (nptr[i] == 32 || (nptr[i] >= 7 && nptr[i] <= 13))
+	while (nptr[i] == 32 || (nptr[i] >= 9 && nptr[i] <= 13))
 		i++;
 	if (nptr[i] == 43 || nptr[i] == 45)
 	{

@@ -3,35 +3,32 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strrchr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jeff <jeff@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: jemorais <jemorais@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/10 14:26:42 by jemorais          #+#    #+#             */
-/*   Updated: 2024/10/17 18:33:09 by jeff             ###   ########.fr       */
+/*   Updated: 2024/10/22 19:12:45 by jemorais         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-// #include <string.h>
-// #include <stdio.h>
-//#include <stddef.h>
 #include "libft.h"
 
 char	*ft_strrchr(const char *s, int c)
 {
 	int	i;
-	int	box;
+	int	flag;
 
 	i = 0;
-	box = -1;
+	flag = -1;
 	while (s[i])
 	{
 		if (s[i] == (char) c)
-			box = i;
+			flag = i;
 		i++;
 	}
-	if (c == '\0')
+	if ((unsigned char) c == '\0')
 		return ((char *)s + i);
-	if (box != -1)
-		return ((char *)s + box);
+	if (flag != -1)
+		return ((char *)s + flag);
 	return (NULL);
 }
 /*
