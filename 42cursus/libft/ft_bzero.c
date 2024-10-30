@@ -6,13 +6,10 @@
 /*   By: jemorais <jemorais@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/14 12:17:36 by jemorais          #+#    #+#             */
-/*   Updated: 2024/10/16 18:30:45 by jemorais         ###   ########.fr       */
+/*   Updated: 2024/10/30 15:22:55 by jemorais         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-// #include <string.h>
-// #include <stdio.h>
-//#include <stddef.h>
 #include "libft.h"
 
 void	ft_bzero(void *s, size_t n)

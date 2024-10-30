@@ -6,7 +6,7 @@
 /*   By: jemorais <jemorais@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/22 13:02:45 by jemorais          #+#    #+#             */
-/*   Updated: 2024/10/22 13:02:46 by jemorais         ###   ########.fr       */
+/*   Updated: 2024/10/30 15:47:42 by jemorais         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,11 +20,10 @@ void	ft_putstr_fd(char *s, int fd)
 	while (s[++i])
 		write(fd, &s[i], 1);
 }
-/*
-int	main(void)
-{
-	char	c_a[] = "";
 
-	ft_putstr_fd(c_a, 1);
-}
-*/
+// int	main(void)
+// {
+// 	char	c_a[] = "";
+
+// 	ft_putstr_fd(c_a, 1);
+// }

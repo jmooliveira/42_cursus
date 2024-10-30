@@ -6,13 +6,10 @@
 /*   By: jemorais <jemorais@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/15 11:48:49 by jemorais          #+#    #+#             */
-/*   Updated: 2024/10/22 18:43:08 by jemorais         ###   ########.fr       */
+/*   Updated: 2024/10/30 15:25:30 by jemorais         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-// #include <string.h>
-// #include <stdio.h>
-// #include <stddef.h>
 #include "libft.h"
 
 void	*ft_memmove(void *dest, const void *src, size_t n)

@@ -6,14 +6,10 @@
 /*   By: jemorais <jemorais@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/14 11:12:41 by jemorais          #+#    #+#             */
-/*   Updated: 2024/10/22 17:55:05 by jemorais         ###   ########.fr       */
+/*   Updated: 2024/10/30 15:22:43 by jemorais         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-// #include <stdio.h>
-// #include <string.h>
-// #include <stdlib.h>
-// #include <stddef.h>
 #include "libft.h"
 
 void	*ft_memset(void *s, int c, size_t n)

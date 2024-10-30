@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strtrim.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jeff <jeff@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: jemorais <jemorais@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/18 11:40:24 by jemorais          #+#    #+#             */
-/*   Updated: 2024/10/18 23:31:15 by jeff             ###   ########.fr       */
+/*   Updated: 2024/10/30 15:34:34 by jemorais         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_check_set_in_s(char s, char const *c)
+static int	ft_check_set_in_s(char s, char const *c)
 {
 	int	i;
 
@@ -45,13 +45,12 @@ char	*ft_strtrim(char const *s1, char const *set)
 		return (NULL);
 	return (ptr);
 }
-/*
-int	main(void)
-{
-	char	str[] = "lorem ipsum dolor sit amet";
-	char	s[] = "te";
 
- 	printf("%s\n",ft_strtrim(str, s));
-	return (0);
-}
-*/
+// int	main(void)
+// {
+// 	char	str[] = "lorem ipsum dolor sit amet";
+// 	char	s[] = "te";
+
+//  	printf("%s\n",ft_strtrim(str, s));
+// 	return (0);
+// }

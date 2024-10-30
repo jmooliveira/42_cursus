@@ -6,13 +6,13 @@
 /*   By: jemorais <jemorais@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/18 16:01:02 by jemorais          #+#    #+#             */
-/*   Updated: 2024/10/18 19:15:25 by jemorais         ###   ########.fr       */
+/*   Updated: 2024/10/30 15:45:35 by jemorais         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_nbr_digit(int n)
+static int	ft_nbr_digit(int n)
 {
 	int	i;
 
@@ -27,7 +27,7 @@ int	ft_nbr_digit(int n)
 	return (i);
 }
 
-void	ft_at(char *nbr, int digits, unsigned int nb)
+static void	ft_at(char *nbr, int digits, unsigned int nb)
 {
 	while (digits > 0)
 	{

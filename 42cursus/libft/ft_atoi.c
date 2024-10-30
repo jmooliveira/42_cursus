@@ -6,12 +6,10 @@
 /*   By: jemorais <jemorais@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/16 14:27:29 by jemorais          #+#    #+#             */
-/*   Updated: 2024/10/22 18:46:10 by jemorais         ###   ########.fr       */
+/*   Updated: 2024/10/30 15:27:55 by jemorais         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-// #include <stdio.h>
-// #include <stdlib.h>
 #include "libft.h"
 
 int	ft_atoi(const char *nptr)

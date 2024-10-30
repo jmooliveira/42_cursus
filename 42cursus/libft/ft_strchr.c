@@ -6,7 +6,7 @@
 /*   By: jemorais <jemorais@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/10 13:50:11 by jemorais          #+#    #+#             */
-/*   Updated: 2024/10/22 19:02:02 by jemorais         ###   ########.fr       */
+/*   Updated: 2024/10/30 14:01:49 by jemorais         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ char	*ft_strchr(const char *s, int c)
 
 // int	main(void)
 // {
-// 	const char	c[30] = "Teste";
+// 	const char	c[30] = "Text";
 // 	char		x;
 
 // 	x = '\0';

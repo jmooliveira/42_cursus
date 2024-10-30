@@ -6,13 +6,10 @@
 /*   By: jemorais <jemorais@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/16 17:40:17 by jemorais          #+#    #+#             */
-/*   Updated: 2024/10/16 19:02:05 by jemorais         ###   ########.fr       */
+/*   Updated: 2024/10/30 15:28:17 by jemorais         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-// #include <stdio.h>
-// #include <stddef.h>
-// #include <stdlib.h>
 #include "libft.h"
 
 void	*ft_calloc(size_t nmemb, size_t size)

@@ -6,7 +6,7 @@
 /*   By: jemorais <jemorais@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/22 13:02:31 by jemorais          #+#    #+#             */
-/*   Updated: 2024/10/22 13:02:32 by jemorais         ###   ########.fr       */
+/*   Updated: 2024/10/30 15:49:21 by jemorais         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,12 +29,11 @@ void	ft_putnbr_fd(int n, int fd)
 	c = 48 + nb % 10;
 	write(fd, &c, 1);
 }
-/*
-int	main(void)
-{
-	int nb;// = -2147483648;
 
-	scanf("%d", &nb);
-	ft_putnbr_fd(nb, 1);
-}
-*/
+// int	main(void)
+// {
+// 	int nb;// = -2147483648;
+
+// 	scanf("%d", &nb);
+// 	ft_putnbr_fd(nb, 1);
+// }

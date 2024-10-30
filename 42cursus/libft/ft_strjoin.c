@@ -6,7 +6,7 @@
 /*   By: jemorais <jemorais@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/18 11:40:38 by jemorais          #+#    #+#             */
-/*   Updated: 2024/10/18 11:40:39 by jemorais         ###   ########.fr       */
+/*   Updated: 2024/10/30 15:33:03 by jemorais         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,13 +27,12 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	ft_strlcat(ptr, s2, len_s2 + len_s1 + 1);
 	return (ptr);
 }
-/*
-int	main(void)
-{
-	char	str1[9] = "Jefferson";
-	char	str2[8] = " Morais";
 
-	printf("%s\n",ft_strjoin(str1, str2));
-	return (0);
-}
-*/
+// int	main(void)
+// {
+// 	char	str1[9] = "Jefferson";
+// 	char	str2[8] = " Morais";
+
+// 	printf("%s\n",ft_strjoin(str1, str2));
+// 	return (0);
+// }

@@ -6,11 +6,10 @@
 /*   By: jemorais <jemorais@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/08 15:54:12 by jemorais          #+#    #+#             */
-/*   Updated: 2024/10/10 17:43:22 by jemorais         ###   ########.fr       */
+/*   Updated: 2024/10/30 13:41:38 by jemorais         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-//#include <stdio.h>
 #include "libft.h"
 
 int	ft_isalnum(int c)
@@ -19,13 +18,12 @@ int	ft_isalnum(int c)
 		return (1);
 	return (0);
 }
-/*
-int	main(void)
-{
-	char	c;
 
-	scanf("%c", &c);
-	printf("%d\n",ft_isdigit(c));
-	return (0);
-}
-*/
+// int	main(void)
+// {
+// 	char	c;
+
+// 	scanf("%c", &c);
+// 	printf("%d\n",ft_isdigit(c));
+// 	return (0);
+// }
