@@ -1,10 +1,22 @@
+# **************************************************************************** #
+#                                                                              #
+#                                                         :::      ::::::::    #
+#    Makefile                                           :+:      :+:    :+:    #
+#                                                     +:+ +:+         +:+      #
+#    By: jemorais <jemorais@student.42.fr>          +#+  +:+       +#+         #
+#                                                 +#+#+#+#+#+   +#+            #
+#    Created: 2024/11/04 12:10:56 by jemorais          #+#    #+#              #
+#    Updated: 2024/11/04 13:07:18 by jemorais         ###   ########.fr        #
+#                                                                              #
+# **************************************************************************** #
+
 NAME		=	libftprintf.a
 
 CC			=	cc
 
 CFLAGS		=	-Wall -Werror -Wextra
 
-SRCS		=	libftprintf.c
+SRCS		=	ft_printf.c
 
 HEADER		=	ft_printf.h
 
