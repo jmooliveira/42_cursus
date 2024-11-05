@@ -6,43 +6,36 @@
 /*   By: jemorais <jemorais@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/31 12:04:18 by jemorais          #+#    #+#             */
-/*   Updated: 2024/11/04 17:28:18 by jemorais         ###   ########.fr       */
+/*   Updated: 2024/11/05 18:18:55 by jemorais         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int	ft_putnbr_base(long int nb, char up_lo)
+int	ft_putnbr_base(long long nb, const char *up_lo)
 {
 	int	count;
 
 	count = 0;
-	if (nb == '\0')
-		return (0);
+	if (nb < 0)
+		nb = (unsigned long long) -nb;
 	if (nb > 15)
 		count += ft_putnbr_base(nb / 16, up_lo);
 	nb = nb % 16;
-	if (nb > 9)
+	if (*up_lo == 'X')
 	{
-		if (up_lo == 'X')
+		if (nb > 9)
 			count += ft_putchar(nb - 10 + 'A');
 		else
-			count += ft_putchar(nb - 10 + 'a');
+			count += ft_putchar(nb + '0');
 	}
 	else
-		count += ft_putchar(nb + '0');
-	return (count);
-}
-
-int	ft_putnbr_baseupperlower(long int nb, const char *frt)
-{
-	int	count;
-
-	count = 0;
-	if (*frt == 'x')
-		count = ft_putnbr_base(nb, 'x');
-	if (*frt == 'X')
-		count = ft_putnbr_base(nb, 'X');
+	{
+		if (nb > 9)
+			count += ft_putchar(nb - 10 + 'a');
+		else
+			count += ft_putchar(nb + '0');
+	}
 	return (count);
 }
 
@@ -85,17 +78,23 @@ int	ft_putnbr(int n)
 	return (count);
 }
 
+int	ft_check_ptr(void *ptr)
+{
+	if (ptr == 0)
+	{
+		write (1, "(nil)", 5);
+		return (5);
+	}
+	else
+		return (ft_putnbr_baseptr((unsigned long)ptr, 1));
+}
+
 int	ft_putnbr_baseptr(unsigned long nb, int flag)
 {
 	int	count;
 
 	count = 0;
-	if (nb == 0 && flag != 1)
-	{
-		write (1, "(nil)", 5);
-		return (5);
-	}
-	else if (flag == 1)
+	if (flag == 1)
 	{
 		write(1, "0x", 2);
 		flag = 0;
@@ -150,13 +149,13 @@ int	ft_check_arg(va_list print, const char *frt)
 	else if (*frt == 's')
 		count += ft_putstr(va_arg(print, char *));
 	else if (*frt == 'p')
-		count += ft_putnbr_baseptr((unsigned long)va_arg(print, void *), 1);
+		count += ft_check_ptr(va_arg(print, void *));
 	else if (*frt == 'd' || *frt == 'i')
 		count += ft_putnbr(va_arg(print, int));
 	else if (*frt == 'u')
-		count += ft_putnbr_unsigned(va_arg(print, unsigned int));
+		count += ft_putnbr_unsigned(va_arg(print, long int));
 	else if (*frt == 'x' || *frt == 'X')
-		count += ft_putnbr_baseupperlower((long int)va_arg(print, long int), frt);
+		count += ft_putnbr_base(va_arg(print, long long), frt);
 	else if (*frt == '%')
 	{
 		write (1, "%", 1);
@@ -211,10 +210,10 @@ int	ft_printf(const char *frt, ...)
 // 	unsigned int	nbr;
 // 	char			*ptr;
 
-// 	nbr = 4242424242;
+// 	nbr = 42424242;
 // 	ptr = "fck";
-// 	printf("%d\n", ft_printf("%c Hell %X heaven %p minha1 %s \n", 'a', nbr, &ptr, ptr));
-// 	printf("%d\n", printf("%c Hell %X heaven %p padrao %s \n", 'a', nbr, &ptr, ptr));
+// 	printf("%d\n", ft_printf("Hell %x heaven %p minha1 %s.\n", nbr, &ptr, ptr));
+// 	printf("%d\n", printf("Hell %x heaven %p padrao %s.\n", nbr, &ptr, ptr));
 // 	//printf("%d\n", ft_printf(" NULL %s NULL \n", NULL));
 // 	//printf("%d\n", printf(" NULL %s NULL \n", NULL));
 // 	return (0);
