@@ -6,138 +6,11 @@
 /*   By: jemorais <jemorais@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/31 12:04:18 by jemorais          #+#    #+#             */
-/*   Updated: 2024/11/05 18:18:55 by jemorais         ###   ########.fr       */
+/*   Updated: 2024/11/06 16:53:11 by jemorais         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
-
-int	ft_putnbr_base(long long nb, const char *up_lo)
-{
-	int	count;
-
-	count = 0;
-	if (nb < 0)
-		nb = (unsigned long long) -nb;
-	if (nb > 15)
-		count += ft_putnbr_base(nb / 16, up_lo);
-	nb = nb % 16;
-	if (*up_lo == 'X')
-	{
-		if (nb > 9)
-			count += ft_putchar(nb - 10 + 'A');
-		else
-			count += ft_putchar(nb + '0');
-	}
-	else
-	{
-		if (nb > 9)
-			count += ft_putchar(nb - 10 + 'a');
-		else
-			count += ft_putchar(nb + '0');
-	}
-	return (count);
-}
-
-int	ft_putnbr_unsigned(unsigned int n)
-{
-	char			c;
-	unsigned int	nb;
-	int				count;
-
-	nb = n;
-	count = 0;
-	if (nb > 9)
-		count += ft_putnbr(nb / 10);
-	c = 48 + nb % 10;
-	write(1, &c, 1);
-	count++;
-	return (count);
-}
-
-int	ft_putnbr(int n)
-{
-	char			c;
-	unsigned int	nb;
-	int				count;
-
-	count = 0;
-	if (n < 0)
-	{
-		write(1, "-", 1);
-		nb = -1 * (unsigned int)(n);
-		count++;
-	}
-	else
-		nb = (unsigned int) n;
-	if (nb > 9)
-		count += ft_putnbr(nb / 10);
-	c = '0' + nb % 10;
-	write(1, &c, 1);
-	count++;
-	return (count);
-}
-
-int	ft_check_ptr(void *ptr)
-{
-	if (ptr == 0)
-	{
-		write (1, "(nil)", 5);
-		return (5);
-	}
-	else
-		return (ft_putnbr_baseptr((unsigned long)ptr, 1));
-}
-
-int	ft_putnbr_baseptr(unsigned long nb, int flag)
-{
-	int	count;
-
-	count = 0;
-	if (flag == 1)
-	{
-		write(1, "0x", 2);
-		flag = 0;
-		count += 2;
-	}
-	if (nb > 15)
-		count += ft_putnbr_baseptr(nb / 16, flag);
-	nb = nb % 16;
-	if (nb > 9)
-		count += ft_putchar(nb - 10 + 'a');
-	else
-		count += ft_putchar(nb + '0');
-	return (count);
-}
-
-int	ft_putstr(char *s)
-{
-	int		i;
-	char	*str;
-
-	str = s;
-	if (str == NULL)
-	{
-		write (1, "(null)", 6);
-		return (6);
-	}
-	i = 0;
-	while (s[i])
-	{
-		write(1, &s[i], 1);
-		i++;
-	}
-	return (i);
-}
-
-int	ft_putchar(char c)
-{
-	int	count;
-
-	count = 1;
-	write(1, &c, 1);
-	return (count);
-}
 
 int	ft_check_arg(va_list print, const char *frt)
 {
@@ -155,12 +28,9 @@ int	ft_check_arg(va_list print, const char *frt)
 	else if (*frt == 'u')
 		count += ft_putnbr_unsigned(va_arg(print, long int));
 	else if (*frt == 'x' || *frt == 'X')
-		count += ft_putnbr_base(va_arg(print, long long), frt);
+		count += ft_putnbr_base(va_arg(print, int), frt);
 	else if (*frt == '%')
-	{
-		write (1, "%", 1);
-		count++;
-	}
+		count += ft_putchar('%');
 	return (count);
 }
 
@@ -210,11 +80,8 @@ int	ft_printf(const char *frt, ...)
 // 	unsigned int	nbr;
 // 	char			*ptr;
 
-// 	nbr = 42424242;
+// 	nbr = -2147483648;
 // 	ptr = "fck";
-// 	printf("%d\n", ft_printf("Hell %x heaven %p minha1 %s.\n", nbr, &ptr, ptr));
-// 	printf("%d\n", printf("Hell %x heaven %p padrao %s.\n", nbr, &ptr, ptr));
-// 	//printf("%d\n", ft_printf(" NULL %s NULL \n", NULL));
-// 	//printf("%d\n", printf(" NULL %s NULL \n", NULL));
-// 	return (0);
+// 	printf("%d\n", ft_printf("Hell %X heaven %p My %s %%.\n", nbr, &ptr, ptr));
+// 	printf("%d\n", printf("Hell %X heaven %p Df %s %%.\n", nbr, &ptr, ptr));
 // }
