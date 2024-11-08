@@ -6,7 +6,7 @@
 /*   By: jemorais <jemorais@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/16 17:40:17 by jemorais          #+#    #+#             */
-/*   Updated: 2024/10/30 17:52:20 by jemorais         ###   ########.fr       */
+/*   Updated: 2024/11/08 14:03:29 by jemorais         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,11 +32,11 @@ void	*ft_calloc(size_t nmemb, size_t size)
 
 // int	main(void)
 // {
-// 	char	nmem;
+// 	char	*nmem;
 // 	size_t	nb;
 
 // 	nmem = 'a';
-// 	nb = 5;
+// 	nb = -1;
 // 	ft_calloc(nmem, nb);
 // 	return (0);
 // }

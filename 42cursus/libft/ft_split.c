@@ -6,7 +6,7 @@
 /*   By: jemorais <jemorais@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/22 13:00:38 by jemorais          #+#    #+#             */
-/*   Updated: 2024/10/22 17:47:18 by jemorais         ###   ########.fr       */
+/*   Updated: 2024/11/08 18:27:21 by jemorais         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,10 +18,10 @@ static int	ft_words_count(char const *s, char c)
 	int	i;
 	int	flag;
 
-	flag = 1;
-	i = 0;
 	if (!*s)
 		return (0);
+	flag = 1;
+	i = 0;
 	count_words = 0;
 	while (s[i])
 	{

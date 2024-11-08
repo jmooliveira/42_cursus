@@ -6,7 +6,7 @@
 /*   By: jemorais <jemorais@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/11 12:49:55 by jemorais          #+#    #+#             */
-/*   Updated: 2024/10/30 15:20:21 by jemorais         ###   ########.fr       */
+/*   Updated: 2024/11/08 15:09:57 by jemorais         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,10 +19,9 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 	size_t	little_len;
 
 	i = 0;
-	j = 0;
-	little_len = ft_strlen(little);
 	if (little[0] == '\0')
 		return ((char *)big);
+	little_len = ft_strlen(little);
 	while (big[i] && i < len)
 	{
 		j = 0;
