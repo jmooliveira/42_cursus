@@ -6,7 +6,7 @@
 /*   By: jemorais <jemorais@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/11 12:49:55 by jemorais          #+#    #+#             */
-/*   Updated: 2024/11/08 15:09:57 by jemorais         ###   ########.fr       */
+/*   Updated: 2024/11/12 12:39:33 by jemorais         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,14 +36,40 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 	return (NULL);
 }
 
-// int	main(void)
-// {
-// 	char	b[9] = "Jefferson";
-// 	char	l[3] = "ffr";
-// 	size_t	i;
+// #include <stdio.h>
+// #include <string.h>
 
-// 	i = 9;
-// 	printf("%s\n", ft_strnstr(b, l, i));
-// 	//printf("%s\n", strnstr(b, l, i));
-// 	return (0);
+// int main()
+// {
+//     const char *big = "Hello, this is a test string.";
+//     const char *little = "test";
+//     size_t len;
+
+//     // Teste 1: Substring encontrada dentro do limite
+//     len = 25;
+//     printf("Teste 1: Substring encontrada dentro do limite\n");
+//     printf("ft_strnstr: %s\n", ft_strnstr(big, little, len));
+//     //printf("strnstr:    %d\n\n", strnstr(big, little, len));
+
+//     // Teste 2: Substring maior que o limite
+//     len = 10;
+//     printf("Teste 2: Substring maior que o limite\n");
+//     printf("ft_strnstr: %s\n", ft_strnstr(big, little, len));
+//     //printf("strnstr:    %d\n\n", strnstr(big, little, len));
+
+//     // Teste 3: Substring vazia
+//     little = "";
+//     len = 30;
+//     printf("Teste 3: Substring vazia\n");
+//     printf("ft_strnstr: %s\n", ft_strnstr(big, little, len));
+//     //printf("strnstr:    %d\n\n", strnstr(big, little, len));
+
+//     // Teste 4: Substring não encontrada
+//     little = "nonexistent";
+//     len = 30;
+//     printf("Teste 4: Substring não encontrada\n");
+//     printf("ft_strnstr: %s\n", ft_strnstr(big, little, len));
+//     //printf("strnstr:    %d\n\n", strnstr(big, little, len));
+
+//     return 0;
 // }

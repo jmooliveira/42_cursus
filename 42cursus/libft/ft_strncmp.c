@@ -6,7 +6,7 @@
 /*   By: jemorais <jemorais@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/10 16:45:29 by jemorais          #+#    #+#             */
-/*   Updated: 2024/10/22 18:36:53 by jemorais         ###   ########.fr       */
+/*   Updated: 2024/11/12 12:14:46 by jemorais         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,14 +28,37 @@ int	ft_strncmp(const char *s1, const char *s2, size_t n)
 	return (str1[i] - str2[i]);
 }
 
-// int	main(void)
-// {
-// 	char	name[20] = "abcdefgh";
-// 	char	cmp[20] = "abcdwxyz";
-// 	size_t	x;
+// #include <stdio.h>
+// #include <string.h>
 
-// 	x = 4;
-// 	printf("%d\n", ft_strncmp(name, cmp, x));
-// 	printf("%d\n", strncmp(name, cmp, x));
-// 	return (0);
+// int main()
+// {
+//     const char *str1 = "Hello, world!";
+//     const char *str2 = "Hello, world!";
+//     const char *str3 = "Hello";
+//     const char *str4 = "Hi, world!";
+
+//     size_t n = 1;
+
+//     // Teste 1: Comparação igual
+//     printf("Teste 1: Comparação igual (Hello)\n");
+//     printf("ft_strncmp: %d\n", ft_strncmp(str1, str2, n));
+//     printf("strncmp:    %d\n\n", strncmp(str1, str2, n));
+
+//     // Teste 2: Comparação parcial (Hello vs Hello)
+//     printf("Teste 2: Comparação parcial (Hello vs Hello)\n");
+//     printf("ft_strncmp: %d\n", ft_strncmp(str1, str3, n));
+//     printf("strncmp:    %d\n\n", strncmp(str1, str3, n));
+
+//     // Teste 3: Comparação com strings diferentes
+//     printf("Teste 3: Comparação com strings diferentes (Hello vs Hi)\n");
+//     printf("ft_strncmp: %d\n", ft_strncmp(str1, str4, n));
+//     printf("strncmp:    %d\n\n", strncmp(str1, str4, n));
+
+//     // Teste 4: Comparação com n = 0 (sempre igual)
+//     printf("Teste 4: Comparação com n = 0\n");
+//     printf("ft_strncmp: %d\n", ft_strncmp(str1, str2, 0));
+//     printf("strncmp:    %d\n\n", strncmp(str1, str2, 0));
+
+//     return 0;
 // }

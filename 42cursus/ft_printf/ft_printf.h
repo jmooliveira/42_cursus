@@ -6,14 +6,12 @@
 /*   By: jemorais <jemorais@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/31 12:08:27 by jemorais          #+#    #+#             */
-/*   Updated: 2024/11/06 16:44:31 by jemorais         ###   ########.fr       */
+/*   Updated: 2024/11/12 15:17:52 by jemorais         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef FT_PRINTF_H
 # define FT_PRINTF_H
-
-# include <stdio.h>
 
 # include <stdarg.h>
 # include <unistd.h>
