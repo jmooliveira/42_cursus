@@ -6,7 +6,7 @@
 /*   By: jemorais <jemorais@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/12 15:14:34 by jemorais          #+#    #+#             */
-/*   Updated: 2024/11/13 20:57:14 by jemorais         ###   ########.fr       */
+/*   Updated: 2024/11/13 21:12:17 by jemorais         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,12 +15,14 @@
 char	*get_next_line(int fd)
 {
 	char	*buffer;
-	int		count;
+	char	*line;
+	//int		count;
 
 	// count = 1; // estava no lugar de BUFFER_SIZE
 	while (read(fd, &buffer, BUFFER_SIZE))
 		write(1, &buffer, BUFFER_SIZE);
-	return buffer;
+	line = buffer;
+	return line;
 }
 
 #include <stdio.h>
@@ -42,6 +44,7 @@ int	main(int argc, char *argv[])
 			return 1;
 		}
 		get_next_line(fd);
+		printf("\n--%s--\n", get_next_line(fd));
 		close(fd);
 	}
 	return (0);
