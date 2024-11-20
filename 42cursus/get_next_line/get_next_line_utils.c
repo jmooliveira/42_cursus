@@ -6,29 +6,11 @@
 /*   By: jemorais <jemorais@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/12 15:19:36 by jemorais          #+#    #+#             */
-/*   Updated: 2024/11/18 18:10:15 by jemorais         ###   ########.fr       */
+/*   Updated: 2024/11/19 15:50:36 by jemorais         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "get_next_line.h"
-
-void	*ft_calloc(size_t nmemb, size_t size)
-{
-	unsigned char	*temp;
-	size_t			total_size;
-	size_t			i;
-
-	total_size = nmemb * size;
-	if (nmemb != 0 && (total_size / nmemb != size))
-		return (NULL);
-	i = 0;
-	temp = malloc (nmemb * size);
-	if (!temp)
-		return (NULL);
-	while (i < size * nmemb)
-		temp[i++] = 0;
-	return (temp);
-}
 
 char	*ft_strdup(const char *s)
 {
@@ -72,7 +54,7 @@ char	*ft_strjoin(char const *s1, char const *s2)
 
 	len_s1 = ft_strlen(s1);
 	len_s2 = ft_strlen(s2);
-	ptr = (char *) ft_calloc (len_s1 + len_s2 + 1, sizeof(char));
+	ptr = (char *)malloc(len_s1 + len_s2 + 1 * sizeof(char));
 	if (!ptr)
 		return (NULL);
 	ft_strlcpy(ptr, s1, len_s1 + 1);
