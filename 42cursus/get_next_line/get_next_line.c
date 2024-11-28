@@ -6,7 +6,7 @@
 /*   By: jemorais <jemorais@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/12 15:14:34 by jemorais          #+#    #+#             */
-/*   Updated: 2024/11/28 17:07:31 by jemorais         ###   ########.fr       */
+/*   Updated: 2024/11/28 19:54:39 by jemorais         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -82,7 +82,7 @@ char	*ft_receive_buffer(int fd, char *buffer, char *read_line)
 	return (read_line);
 }
 
-#include <stdio.h>
+// #include <stdio.h>
 
 // int	main(void)
 // {

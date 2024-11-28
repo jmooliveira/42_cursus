@@ -6,7 +6,7 @@
 /*   By: jemorais <jemorais@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/12 15:19:36 by jemorais          #+#    #+#             */
-/*   Updated: 2024/11/28 17:19:08 by jemorais         ###   ########.fr       */
+/*   Updated: 2024/11/28 19:53:04 by jemorais         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -69,24 +69,24 @@ char	*ft_strjoin(char const *read_line, char const *buffer)
 	return (ptr);
 }
 
-size_t	ft_strlcat(char *dst, const char *src, size_t size)
+size_t	ft_strlcat(char *ptr, const char *buffer, size_t size)
 {
-	size_t	dst_len;
-	size_t	src_len;
+	size_t	ptr_len;
+	size_t	buffer_len;
 	size_t	i;
 
 	i = 0;
-	dst_len = ft_strlen(dst);
-	src_len = ft_strlen(src);
-	if (size <= dst_len)
-		return (size + src_len);
-	while (dst_len + i + 1 < size && src[i])
+	ptr_len = ft_strlen(ptr);
+	buffer_len = ft_strlen(buffer);
+	if (size <= ptr_len)
+		return (size + buffer_len);
+	while (ptr_len + i + 1 < size && buffer[i])
 	{
-		dst[dst_len + i] = src[i];
+		ptr[ptr_len + i] = buffer[i];
 		i++;
 	}
-	dst[dst_len + i] = '\0';
-	return (dst_len + src_len);
+	ptr[ptr_len + i] = '\0';
+	return (ptr_len + buffer_len);
 }
 
 size_t	ft_strlen(const char *s)
