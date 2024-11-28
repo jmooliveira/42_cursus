@@ -1,38 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   get_next_line.c                                    :+:      :+:    :+:   */
+/*   get_next_line_bonus.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jemorais <jemorais@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/12 15:14:34 by jemorais          #+#    #+#             */
-/*   Updated: 2024/11/28 17:07:31 by jemorais         ###   ########.fr       */
+/*   Updated: 2024/11/28 14:22:30 by jemorais         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "get_next_line.h"
+#include "get_next_line_bonus.h"
 
 char	*get_next_line(int fd)
 {
-	static char	*read_line;
+	static char	*read_line[1024];
 	char		*buffer;
 	char		*remainder;
 	char		*line;
 
 	if (fd < 0 || BUFFER_SIZE <= 0)
 		return (NULL);
-	if (read_line == NULL)
-		read_line = ft_strdup("");
+	if (read_line[fd] == NULL)
+		read_line[fd] = ft_strdup("");
 	buffer = malloc((BUFFER_SIZE + 1) * sizeof(char));
 	if (!buffer)
-		return (free(read_line), read_line = NULL);
-	read_line = ft_receive_buffer(fd, buffer, read_line);
-	if (read_line == NULL)
+		return (free(read_line[fd]), read_line[fd] = NULL);
+	read_line[fd] = ft_receive_buffer(fd, buffer, read_line[fd]);
+	if (read_line[fd] == NULL)
 		return (NULL);
-	line = ft_line(read_line);
-	remainder = ft_strdup(read_line + ft_strlen(line));
-	free(read_line);
-	read_line = remainder;
+	line = ft_line(read_line[fd]);
+	remainder = ft_strdup(read_line[fd] + ft_strlen(line));
+	free(read_line[fd]);
+	read_line[fd] = remainder;
 	return (line);
 }
 
@@ -82,23 +82,27 @@ char	*ft_receive_buffer(int fd, char *buffer, char *read_line)
 	return (read_line);
 }
 
-#include <stdio.h>
+// #include <stdio.h>
 
 // int	main(void)
 // {
 // 	char	*line;
 // 	int		fd;
 
-// 	fd = open("42.txt", O_RDONLY);
+// 	fd = open("lifesdog.txt", O_RDONLY);
+// 	if (fd == -1)
+// 	{
+// 		perror("ERROR");
+// 		return (1);
+// 	}
 // 	while ((line = get_next_line(fd)) != NULL)
 // 	{
 // 		printf("call is:%s", line);
 // 		free(line);
 // 	}
-// 	printf("%s", line);
 // 	close(fd);
 // 	return (0);
 // }
 
 // cc -Wall -Wextra -Werror -D BUFFER_SIZE=42
-// get_next_line.c get_next_line_utils.c get_next_line.h
+// get_next_line_bonus.c get_next_line_utils_bonus.c get_next_line_bonus.h

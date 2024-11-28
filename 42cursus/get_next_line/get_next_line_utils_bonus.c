@@ -1,16 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   get_next_line_utils.c                              :+:      :+:    :+:   */
+/*   get_next_line_utils_bonus.c                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jemorais <jemorais@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/12 15:19:36 by jemorais          #+#    #+#             */
-/*   Updated: 2024/11/28 17:19:08 by jemorais         ###   ########.fr       */
+/*   Updated: 2024/11/28 14:22:41 by jemorais         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "get_next_line.h"
+#include "get_next_line_bonus.h"
 
 char	*ft_strdup(const char *s)
 {
@@ -46,26 +46,27 @@ char	*ft_strchr(const char *s, int c)
 	return (0);
 }
 
-char	*ft_strjoin(char const *read_line, char const *buffer)
+char	*ft_strjoin(char const *s1, char const *s2)
 {
 	char	*ptr;
-	size_t	len_read_line;
-	size_t	len_buffer;
+	size_t	len_s1;
+	size_t	len_s2;
 	size_t	i;
 
-	len_read_line = ft_strlen(read_line);
-	len_buffer = ft_strlen(buffer);
-	ptr = (char *)malloc(len_read_line + len_buffer + 1 * sizeof(char));
+	len_s1 = ft_strlen(s1);
+	len_s2 = ft_strlen(s2);
+	ptr = (char *)malloc(len_s1 + len_s2 + 1 * sizeof(char));
 	if (!ptr)
 		return (NULL);
 	i = 0;
-	while (i < len_read_line)
+	while (i < len_s1)
 	{
-		ptr[i] = read_line[i];
+		ptr[i] = s1[i];
 		i++;
 	}
 	ptr[i] = '\0';
-	ft_strlcat(ptr, buffer, len_buffer + len_read_line + 1);
+	ft_strlcat(ptr, s2, len_s2 + len_s1 + 1);
+	ft_strlcat(ptr, s2, len_s2 + len_s1 + 1);
 	return (ptr);
 }
 
